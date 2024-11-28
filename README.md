@@ -45,6 +45,7 @@ Utilizados para aplicar a lógica necessária no FrontEnd, criando e estilizando
 - **NodeJs**: v22.11.0 
 - **Banco de dados**: MySQL
 - **Vite** instalado
+- **Express** instalado
 
 ## 🎲 Rodando o BackEnd (servidor)
 
@@ -74,6 +75,10 @@ A tabela **users** com as seguintes colunas:
 1. Clone ou baixe o repositório: **[https://github.com/Choroco/TechWatch.git](https://github.com/Choroco/TechWatch.git)**
 2. Após clonar ou baixar, vá até **TechWatch/BackEND/** e execute o comando:
 
+```bash
+npm install express
+```
+Apos a instalação, basta executar no mesmo diretorio o comando.
 ```bash
 node .\index.js
 ```
