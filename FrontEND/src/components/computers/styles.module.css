@@ -1,0 +1,113 @@
+.container {
+  background-color: #f5f5f5;
+  width: 100vw;
+}
+
+.header h1 {
+  margin-left: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #010167;
+  color: white;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.input,
+.seletorLoja,
+.addButton {
+  outline: none;
+  margin-left: 16px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: black;
+}
+
+.addButton {
+  cursor: pointer;
+  background-color: #6898ef;
+  color: white;
+  font-weight: bold;
+}
+
+.addButton:hover {
+  transition: all ease-in-out 0.2s;
+  background-color: #4e70af;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  text-align: left;
+  background-color: white;
+  color: #000;
+}
+
+.th,
+.td {
+  text-align: center;
+  border: 1px solid #000000;
+  padding: 12px 15px;
+  font-size: 1rem;
+}
+
+.th {
+  background-color: #6898ef;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tr:hover {
+  background-color: #dbdbdb;
+  transition: all ease-in-out 0.2s;
+}
+
+.noData {
+  height: 100vw;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #010167;
+  padding: 50px 0;
+}
+
+.logoutButton {
+  background-color: #e00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 16px;
+  font-size: 16px;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #c00;
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
