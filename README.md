@@ -4,37 +4,25 @@ TechWatch é um programa criado para gerenciar e monitorar computadores em uma r
 
 As tecnologias utilizadas foram:
 
-- **Java**
+- **JavaScript (Back-End)**
 
-Utilizado para inserir os dados dos computadores no banco de dados (programa feito externamente e inserido manualmente em todos os computadores). Também utilizado na API em Spring, onde todo o BackEnd da API foi desenvolvido em Java, utilizando as tecnologias do Spring.
+Linguagem de programação usada para a implementação da lógica do sistema, permitindo interatividade e comunicação em tempo real.
 
-- **Spring**
+- **NodeJs**
 
-Utilizado no BackEnd em conjunto com Maven, e suas dependências, como JPA, JDBC e Spring Web.
+Ambiente de execução JavaScript no lado do servidor, utilizado para construir a API que interage com o banco de dados e manipula os dados do sistema de forma eficiente.
 
-- **Maven**
+- **Express**
 
-Utilizado no BackEnd em conjunto com o Spring e o Java para a criação da API e suas propriedades.
-
-- **AWS - EC2**
- 
-Utilizado para instalação e configuração de uma máquina virtual onde seria configurado o banco de dados. Isso é necessário para possibilitar o acesso externo de todas as lojas e da matriz, sem a mudança constante de IP público dos provedores. No entanto, também pode ser utilizado um banco de dados local, se a configuração de rede for com IP fixo.
+Framework para Node.js que facilita a criação e gestão de rotas e middleware, tornando a implementação da API mais organizada e escalável.
 
 - **MySQL**
 
-Utilizado dentro da VM na EC2 para receber as conexões e dados dos computadores e da API.
+Sistema de gerenciamento de banco de dados relacional, utilizado para armazenar e organizar as informações coletadas sobre os dispositivos na rede, garantindo a persistência e a integridade dos dados.
 
-- **JDBC**
+- **JWT**
 
-Dependência do Spring utilizada para configuração da API e suas propriedades.
-
-- **JPA**
-
-Dependência do Spring utilizada para configuração da API e suas propriedades.
-
-- **JWT Security**
-
-Dependência do Spring utilizada para fazer a configuração de autenticação de usuário e senha com token.
+Framework utilizada para realizar a configuração de autenticação de usuário e senha com token.
 
 - **React**
 
@@ -53,51 +41,49 @@ Utilizados para aplicar a lógica necessária no FrontEnd, criando e estilizando
 ## 🚀 Pré-requisitos
 
 - **Sistema Operacional**: Windows
-- **Gerenciador de arquivos**: VS Code, IntelliJ
-- **Spring e dependências**: JPA, JDBC, Spring Web, JWT Security
-- **Java 8** (mínimo)
+- **Gerenciador de arquivos**: VS Code
+- **NodeJs**: v22.11.0 
 - **Banco de dados**: MySQL
 - **Vite** instalado
 
 ## 🎲 Rodando o BackEnd (servidor)
 
-1. Crie o banco de dados no MySQL manualmente. O nome padrão do banco de dados da API é **"teste"**. Se houver alteração no nome do banco, altere o arquivo `application.properties`.  
-2. Dentro do banco, devem existir duas tabelas: **computadores** e **users**.
+1. Crie o banco de dados no MySQL manualmente. O nome padrão do banco de dados da API é **"database"**. Se houver alteração no nome do banco ou senha altere o arquivo `TechWatch/BackEND/infraestrutura/conexao.js`.  
+2. Dentro do banco, será criado duas tabelas automaticamente: **computadores** e **users**.
 
-A tabela **computadores** deve ter as seguintes colunas:
+A tabela **computadores** com as seguintes colunas:
 - id
 - mac
-- local_host_name
-- data_de_instalacao
+- localHostName
+- dataDeInstalacao
 - processador
-- ram_size
-- sistema_operacional
+- ramSize
+- sistemaOperacional
 - ip
 - loja
-- data_atual
+- dataAtual
 
-**Arquivo DDL para gerar automático** --> TechWatch/teste_computador.sql
-
-A tabela **users** deve ter as seguintes colunas:
+A tabela **users** com as seguintes colunas:
 - id
 - login
 - password
 - role
 
-**Arquivo DDL para gerar automático** --> TechWatch/teste_users.sql
-
 ## 🖥 Clone ou baixe o repositório
 
-1. Clone ou baixe o repositório: **[https://github.com/JaoFormentini/TechWatch.git](https://github.com/JaoFormentini/TechWatch.git)**
-2. Após clonar ou baixar, vá até **TechWatch/BackEND/src/main/java/com/facimp/projetoPooJava/** e execute o arquivo **ProjetoPooJavaApplication.java** em algum gerenciador de IDE (VS Code ou IntelliJ). A partir daí, o **BackEnd** estará funcionando, a API será iniciada e estará disponível na porta **8080**.
+1. Clone ou baixe o repositório: **[https://github.com/Choroco/TechWatch.git](https://github.com/Choroco/TechWatch.git)**
+2. Após clonar ou baixar, vá até **TechWatch/BackEND/** e execute o comando:
 
-Para utilizar qualquer método, será necessário realizar o cadastro de usuário e a autenticação de login utilizando os devidos **ENDPOINTS**.
+```bash
+node .\index.js
+```
+Apartir dai, o BackEND ja irá funcionar, a API vai startar, e utilizar a porta 8080.
 
 ---
 
 ## 🎲 Rodando o FrontEnd (servidor)
 
-1. Clone ou baixe o repositório: **[https://github.com/JaoFormentini/TechWatch.git](https://github.com/JaoFormentini/TechWatch.git)**
+1. Clone ou baixe o repositório: **[https://github.com/Choroco/TechWatch.git](https://github.com/Choroco/TechWatch.git)**
 2. Após clonar ou baixar, vá até **TechWatch/FrontEND/** e execute o comando:
 
 ```bash
@@ -129,4 +115,4 @@ Apartir dai, o FrontEND ja irá funcionar, a API vai startar, e utilizar a porta
 
 Vale lembrar que todas as funçoes exceto "Mostrar" devem ser utilizadas por um usuario "ADMIN".
 
-##SEGUE LINK DA DOCUMENTAÇAO NO POSTMAM --> https://documenter.getpostman.com/view/38631377/2sAYBUDY8x
+##SEGUE LINK DA DOCUMENTAÇAO NO POSTMAM --> [https://documenter.getpostman.com/view/38631377/2sAYBUDY8x](https://documenter.getpostman.com/view/39307076/2sAYBXAViw)
